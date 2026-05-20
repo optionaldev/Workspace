@@ -1,0 +1,15 @@
+{
+  "originHash" : "bac1266af3b9507ce84aa1f1d2ae24b718e0de09b24f1f50ef8c5e201b945fca",
+  "pins" : [
+    {
+      "identity" : "swiftprint",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/optionaldev/SwiftPrint",
+      "state" : {
+        "revision" : "f718ec59e74916cb5644bdc9356550ca9b63e15a",
+        "version" : "1.1.1"
+      }
+    }
+  ],
+  "version" : 3
+}

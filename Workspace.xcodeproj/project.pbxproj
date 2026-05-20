@@ -6,8 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		EACAB7D72FA91E35003D93E4 /* debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACAB7D62FA91E31003D93E4 /* debug.swift */; };
+		EAF1EE5C2FBE275D005FE965 /* SwiftPrint in Frameworks */ = {isa = PBXBuildFile; productRef = EAF1EE5B2FBE275D005FE965 /* SwiftPrint */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		EA77C6472FA3A64B0041BBFE /* Workspace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Workspace.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EACAB7D62FA91E31003D93E4 /* debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = debug.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAF1EE5C2FBE275D005FE965 /* SwiftPrint in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +39,7 @@
 		EA77C63E2FA3A64B0041BBFE = {
 			isa = PBXGroup;
 			children = (
+				EACAB7D62FA91E31003D93E4 /* debug.swift */,
 				EA77C6492FA3A64B0041BBFE /* Workspace */,
 				EA77C6482FA3A64B0041BBFE /* Products */,
 			);
@@ -65,6 +73,7 @@
 			);
 			name = Workspace;
 			packageProductDependencies = (
+				EAF1EE5B2FBE275D005FE965 /* SwiftPrint */,
 			);
 			productName = Workspace;
 			productReference = EA77C6472FA3A64B0041BBFE /* Workspace.app */;
@@ -94,6 +103,9 @@
 			);
 			mainGroup = EA77C63E2FA3A64B0041BBFE;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				EAF1EE5A2FBE275C005FE965 /* XCRemoteSwiftPackageReference "SwiftPrint" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = EA77C6482FA3A64B0041BBFE /* Products */;
 			projectDirPath = "";
@@ -119,6 +131,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EACAB7D72FA91E35003D93E4 /* debug.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +347,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EAF1EE5A2FBE275C005FE965 /* XCRemoteSwiftPackageReference "SwiftPrint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/optionaldev/SwiftPrint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EAF1EE5B2FBE275D005FE965 /* SwiftPrint */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EAF1EE5A2FBE275C005FE965 /* XCRemoteSwiftPackageReference "SwiftPrint" */;
+			productName = SwiftPrint;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EA77C63F2FA3A64B0041BBFE /* Project object */;
 }
