@@ -15,7 +15,7 @@ struct ReminderDecodable: Decodable {
     let rate: String?
 }
 
-struct Reminder {
+struct Reminder: Sanitizable {
     
     let id: String
     let time: Time
@@ -26,6 +26,7 @@ struct Reminder {
         guard let id = decodable.id,
               let time = decodable.time else
         {
+            debug("Missing time or id \(decodable)")
             return nil
         }
         
@@ -35,18 +36,20 @@ struct Reminder {
               let hourComponent = timeComponents.first,
               let minuteComponent = timeComponents.last else
         {
+            debug("invalid time  \(decodable)")
             return nil
         }
         
         guard let rawRate = decodable.rate,
               let rate = Rate(rawValue: rawRate) else
         {
+            debug("Invalid rate  \(decodable)")
             return nil
         }
+        
         self.id = id
         self.rate = rate
         self.time = Time(hour: hourComponent, minutes: minuteComponent)
-        
         
         if let days = decodable.days {
             self.days = days.compactMap { Day(rawValue: $0) }

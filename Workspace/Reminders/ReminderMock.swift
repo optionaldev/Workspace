@@ -23,7 +23,7 @@ enum Constants {
     },{
         "id": "c1l3",
         "time": "19:00",
-        "rate": "threeTimesAWeek"
+        "rate": "threeTimesAWeek",
         "days": [1,3,5]
     },{ 
         "id": "s_ds",

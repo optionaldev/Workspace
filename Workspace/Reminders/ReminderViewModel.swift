@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-class ReminderViewModel: ObservableObject {
+final class ReminderViewModel: ObservableObject {
     
     @Published var reminders: [Reminder]
     
@@ -17,11 +17,13 @@ class ReminderViewModel: ObservableObject {
             do {
                 let reminderDecodables = try JSONDecoder().decode([ReminderDecodable].self, from: reminderData)
                 reminders = reminderDecodables.compactMap { Reminder(fromDecodable: $0) }
+                debug("reminders read successfully \(reminders.count)")
                 return
             } catch {
                 debug(error)
             }
         }
+        debug("reminders is empty")
         reminders = []
     }
 }

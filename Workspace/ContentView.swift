@@ -24,7 +24,13 @@ struct ContentView: View {
                 ReminderView()
             }
             .tabItem {
-                Label("Notes", systemImage: "pencil.and.list.clipboard")
+                Label("Reminders", systemImage: "clock")
+            }
+            NavigationStack {
+                ShoppingView()
+            }
+            .tabItem {
+                Label("Shopping", systemImage: "cart")
             }
             NavigationStack {
                 NotesView()

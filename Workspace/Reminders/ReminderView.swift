@@ -12,8 +12,15 @@ struct ReminderView: View {
     @StateObject private var viewModel = ReminderViewModel()
     
     var body: some View {
-        List {
-            
+        List(viewModel.reminders, id: \.id) { item in
+            Text(item.id)
+                .bold()
         }
+        .foregroundStyle(.brown)
     }
+}
+
+
+#Preview {
+    ReminderView()
 }
