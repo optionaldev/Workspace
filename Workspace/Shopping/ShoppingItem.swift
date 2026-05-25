@@ -5,11 +5,19 @@
 //  Created by Alexandru Pavalache on 22.05.2026.
 //
 
-struct ShoppingItem: Sanitizable {
+struct ShoppingItem: Equatable, Identifiable, Sanitizable {
     
     let english: String
     let romanian: String
     let spanish: String
+    
+    // MARK: Identifiable conformance
+    
+    var id: String {
+        return english
+    }
+    
+    // MARK: Init & Sanitizable conformance
     
     init?(fromDecodable decodable: ShoppingItemDecodable) {
         guard let english = decodable.english,
