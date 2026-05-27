@@ -20,6 +20,12 @@ final class ShoppingViewModel: ObservableObject {
     /// The backbone of the ShoppingView. Shows the list of manipulateable items.
     @Published var shoppingItems: [ShoppingItem]
     
+    @Published var shoppingLanguage: Language = Defaults.shoppingLanguage {
+        didSet {
+            Defaults.shoppingLanguage = shoppingLanguage
+        }
+    }
+    
     func didTap(item shoppingItem: ShoppingItem) {
         /// Prevent multiple rows from being in delete mode.
         guard highlightedEnglish == nil else {
@@ -39,6 +45,21 @@ final class ShoppingViewModel: ObservableObject {
             if Task.isCancelled == false {
                 self?.delete(item: shoppingItem)
             }
+        }
+    }
+    
+    func didTapLanguageButton() {
+        shoppingLanguage = shoppingLanguage.next
+    }
+    
+    func text(forShoppingItem shoppingItem: ShoppingItem) -> String {
+        return switch shoppingLanguage {
+        case .english:
+            shoppingItem.english
+        case .romanian:
+            shoppingItem.romanian
+        case .spanish:
+            shoppingItem.spanish
         }
     }
     

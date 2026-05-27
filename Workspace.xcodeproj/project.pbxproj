@@ -17,7 +17,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		EA77C6492FA3A64B0041BBFE /* Workspace */ = {
+		EA213A342FC739AF00AE9A93 /* Workspace */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Workspace;
 			sourceTree = "<group>";
@@ -39,8 +39,8 @@
 		EA77C63E2FA3A64B0041BBFE = {
 			isa = PBXGroup;
 			children = (
+				EA213A342FC739AF00AE9A93 /* Workspace */,
 				EACAB7D62FA91E31003D93E4 /* debug.swift */,
-				EA77C6492FA3A64B0041BBFE /* Workspace */,
 				EA77C6482FA3A64B0041BBFE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,7 +69,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				EA77C6492FA3A64B0041BBFE /* Workspace */,
+				EA213A342FC739AF00AE9A93 /* Workspace */,
 			);
 			name = Workspace;
 			packageProductDependencies = (

@@ -13,6 +13,15 @@ struct ShoppingView: View {
     
     var body: some View {
         VStack(spacing: 0) {
+            HStack {
+                Spacer()
+                Button {
+                    viewModel.didTapLanguageButton()
+                } label: {
+                    Text(viewModel.shoppingLanguage.rawValue.flag)
+                }
+                .padding(10)
+            }
             List {
                 ForEach(viewModel.shoppingItems) { shoppingItem in
                     
@@ -25,7 +34,7 @@ struct ShoppingView: View {
                                   ? "largecircle.fill.circle"
                                   : "circle")
                             .foregroundStyle(.primary)
-                            Text(shoppingItem.english)
+                            Text(viewModel.text(forShoppingItem: shoppingItem))
                                 .foregroundStyle(.primary)
                             Spacer()
                         }
