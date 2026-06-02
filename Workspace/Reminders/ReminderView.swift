@@ -14,7 +14,6 @@ struct ReminderView: View {
     var body: some View {
         List(viewModel.reminders, id: \.id) { item in
             Text(item.id)
-                .bold()
         }
         .foregroundStyle(.brown)
     }
